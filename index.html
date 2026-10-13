@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Usando a IA em cada parte do TCC | Smart TCC</title>
+<meta name="robots" content="noindex, nofollow">
+<style>html,body{margin:0;padding:0;}img{max-width:100%;}[hidden]{display:none!important;}</style>
+<title>Usando a IA em cada parte do TCC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
@@ -1557,6 +1559,11 @@
         <div class="td" role="cell"><span class="rot"><em class="rot-m">Pago · </em>Pro US$ 49/mês</span><strong>Extração em massa</strong> e relatórios de revisão sistemática.</div>
       </div>
       <div class="tr" role="row">
+        <div class="td nome" role="cell"><strong>Consensus</strong><small>busca em artigos</small></div>
+        <div class="td" role="cell"><span class="rot"><em class="rot-m">Grátis · </em>Grátis · buscas Pro limitadas</span>Mostra o que os estudos dizem sobre a sua pergunta, em base <strong>quase toda revisada por pares</strong>; tem filtro para excluir preprints.</div>
+        <div class="td" role="cell"><span class="rot"><em class="rot-m">Pago · </em>Pro US$ 12/mês (anual)</span><strong>Buscas Pro ilimitadas</strong> e cerca de 15 buscas profundas por mês.</div>
+      </div>
+      <div class="tr" role="row">
         <div class="td nome" role="cell"><strong>SciSpace</strong><small>leitura de artigos</small></div>
         <div class="td" role="cell"><span class="rot"><em class="rot-m">Grátis · </em>Grátis</span>Lê o PDF e <strong>explica trechos difíceis</strong>; busca básica.</div>
         <div class="td" role="cell"><span class="rot"><em class="rot-m">Pago · </em>A partir de US$ 12/mês (anual)</span><strong>Deep Review</strong> e chat ilimitado com PDFs.</div>
@@ -1572,7 +1579,7 @@
         <div class="td" role="cell"><span class="rot"><em class="rot-m">Pago · </em>Armazenamento 2 GB US$ 20/ano</span>Mais espaço para sincronizar PDFs; <strong>IA por plugins</strong> (ex.: Beaver, Aria).</div>
       </div>
     </div>
-    <p class="tarja"><b>Dica:</b> Fluxo sugerido: <strong>buscar</strong> (Elicit) → <strong>mapear</strong> (ResearchRabbit) → <strong>guardar</strong> (Zotero) → <strong>ler</strong>.</p>
+    <p class="tarja"><b>Dica:</b> Fluxo sugerido: <strong>buscar</strong> (Elicit ou Consensus) → <strong>mapear</strong> (ResearchRabbit) → <strong>guardar</strong> (Zotero) → <strong>ler</strong>.</p>
     <p class="nota">Versões e preços consultados em set/2026 nos sites oficiais e em comparadores; valores de entrada, sujeitos a alteração.</p>
   </article>
   <article class="cartao">
@@ -2175,6 +2182,18 @@ document.addEventListener('click', function (e) {
   if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(texto).then(function () { feito(true); }, reserva);
   else reserva();
 });
+</script>
+
+<script>
+/* Informa a altura ao Wix, para o elemento de incorporação se ajustar (ver instruções no fim do arquivo) */
+(function () {
+  function avisarAltura() {
+    try { window.parent.postMessage({ tipo: 'altura', altura: document.documentElement.scrollHeight }, '*'); } catch (e) {}
+  }
+  window.addEventListener('load', avisarAltura);
+  window.addEventListener('resize', avisarAltura);
+  if (window.ResizeObserver) new ResizeObserver(avisarAltura).observe(document.body);
+})();
 </script>
 </body>
 </html>
